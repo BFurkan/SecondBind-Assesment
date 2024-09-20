@@ -19,19 +19,20 @@ Before running this project, ensure you have the following installed:
 ## Installation
 
 ### 1. Clone the repository:
-
+```
 git clone https://github.com/BFurkan/SecondBind-Assesment.git
 cd SecondBind-Assesment
-
+```
 2. Install dependencies for the backend (in the project root):
-
+```
 npm install
-
+```
 3. Install dependencies for the frontend (inside the /book-inventory folder):
 
+```
 cd book-inventory
 npm install
-
+```
 
 ## Database Setup
 ### 1. Create a PostgreSQL database:
@@ -41,6 +42,7 @@ CREATE DATABASE book_inventory;
 ### 3. Update PostgreSQL configuration:
 In the server.js file, update the PostgreSQL connection details:
 
+```
 const pool = new Pool({
   user: 'your_postgres_username',
   host: 'localhost',
@@ -48,21 +50,21 @@ const pool = new Pool({
   password: 'your_postgres_password',
   port: 5432,
 });
-
+```
 
 Running the Application
 1. Start the backend server:
 In the project root SecondBind-Assesment folder, run the following command:
-
+```
 node server.js
-
+```
 The backend server will run on http://localhost:3001.
 
 2. Start the frontend server:
 Navigate to the /client directory and start the frontend:
-
+```
 npm start
-
+```
 The frontend app will run on http://localhost:3000.
 
 API Endpoints
