@@ -12,26 +12,30 @@ Node.js (v14.x or later)
 PostgreSQL
 npm or yarn (comes with Node.js)
 Installation
-Clone the repository:
-
+1. Clone the repository:
+bash
+Copy code
 git clone https://github.com/BFurkan/SecondBind-Assesment.git
 cd SecondBind-Assesment
-
-Install dependencies for the backend (in the project root):
+2. Install dependencies for the backend (in the project root):
+bash
+Copy code
 npm install
-
-Install dependencies for the frontend (inside the /book-inventory folder):
-
+3. Install dependencies for the frontend (inside the /book-inventory folder):
+bash
+Copy code
 cd book-inventory
 npm install
-
 Database Setup
-Create a PostgreSQL database:
-
+1. Create a PostgreSQL database:
+sql
+Copy code
 CREATE DATABASE book_inventory;
-
+2. Create the Inventory table:
 Run the following SQL query to create the Inventory table:
 
+sql
+Copy code
 CREATE TABLE Inventory (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
@@ -40,9 +44,7 @@ CREATE TABLE Inventory (
   publication_date VARCHAR(255),
   isbn VARCHAR(255) UNIQUE NOT NULL
 );
-
-Update PostgreSQL configuration:
-
+3. Update PostgreSQL configuration:
 In the server.js file, update the PostgreSQL connection details:
 
 javascript
@@ -54,20 +56,20 @@ const pool = new Pool({
   password: 'your_postgres_password',
   port: 5432,
 });
-
-
 Running the Application
-Start the backend server:
+1. Start the backend server:
+In the project root SecondBind-Assesment folder, run the following command:
 
-In the project root SecondBind-Assesment Folder, run the following command:
-
+bash
+Copy code
 node server.js
 The backend server will run on http://localhost:3001.
 
-Start the frontend server:
-
+2. Start the frontend server:
 Navigate to the /client directory and start the frontend:
 
+bash
+Copy code
 npm start
 The frontend app will run on http://localhost:3000.
 
@@ -83,16 +85,13 @@ Description: Export the inventory data as a CSV file.
 GET /export-json
 Description: Export the inventory data as a JSON file.
 Usage
-Add a New Book:
-
+1. Add a New Book:
 Fill out the form fields (Title, Author, Genre, Publication Date as text, ISBN).
 Click the Add Book button to add the book to the inventory.
-Filter/Search Books:
-
+2. Filter/Search Books:
 Use the search form to filter books by title, author, genre, or publication date.
 The table will display filtered results or all records by default.
-Export Data:
-
+3. Export Data:
 Click the Download CSV or Download JSON buttons to export the book inventory.
 Dependencies
 Backend:
