@@ -67,36 +67,36 @@ npm start
 ```
 The frontend app will run on http://localhost:3000.
 
-API Endpoints
-POST /books
+### API Endpoints
+#### POST /books
 Description: Add a new book to the inventory.
 Request Body: { title, author, genre, publication_date, isbn }
-GET /books
+#### GET /books
 Description: Filter books based on query parameters.
 Query Parameters: title, author, genre, publication_date (all optional).
-GET /export
+#### GET /export
 Description: Export the inventory data as a CSV file.
-GET /export-json
+#### GET /export-json
 Description: Export the inventory data as a JSON file.
-Usage
-1. Add a New Book:
+### Usage
+#### 1. Add a New Book:
 Fill out the form fields (Title, Author, Genre, Publication Date as text, ISBN).
 Click the Add Book button to add the book to the inventory.
-2. Filter/Search Books:
+#### 2. Filter/Search Books:
 Use the search form to filter books by title, author, genre, or publication date.
 The table will display filtered results or all records by default.
-3. Export Data:
+#### 3. Export Data:
 Click the Download CSV or Download JSON buttons to export the book inventory.
-Dependencies
-Backend:
-express: Fast, unopinionated web framework for Node.js.
-pg: PostgreSQL client for Node.js.
-cors: Enable CORS.
-axios: Promise-based HTTP client.
-Frontend:
-react: JavaScript library for building user interfaces.
-@mui/material: Material-UI components for a clean interface.
-@mui/icons-material: Material icons for enhanced UI.
-axios: Promise-based HTTP client.
-Known Issues
+### Dependencies
+#### Backend:
+##### express: Fast, unopinionated web framework for Node.js.
+##### pg: PostgreSQL client for Node.js.
+##### cors: Enable CORS.
+##### axios: Promise-based HTTP client.
+#### Frontend:
+##### react: JavaScript library for building user interfaces.
+##### @mui/material: Material-UI components for a clean interface.
+##### @mui/icons-material: Material icons for enhanced UI.
+##### axios: Promise-based HTTP client.
+### Known Issues
 The publication date is entered as a string (VARCHAR). Ensure consistency when entering dates.
