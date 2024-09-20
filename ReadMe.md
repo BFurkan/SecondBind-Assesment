@@ -1,54 +1,46 @@
-Book Inventory Management System
-A web-based book inventory system built with React, Node.js, and PostgreSQL. This system allows users to add, filter, and export books from the inventory.
+# Book Inventory Management System
 
-Features
-Add New Books: Add book details such as title, author, genre, publication date (as text), and ISBN.
-Filter/Search Books: Search books by title, author, genre, or publication date.
-Export Data: Export the book inventory as CSV or JSON files.
-Prerequisites
+A web-based book inventory system built with **React**, **Node.js**, and **PostgreSQL**. This system allows users to add, filter, and export books from the inventory.
+
+## Features
+
+- **Add New Books**: Add book details such as title, author, genre, publication date (as text), and ISBN.
+- **Filter/Search Books**: Search books by title, author, genre, or publication date.
+- **Export Data**: Export the book inventory as CSV or JSON files.
+
+## Prerequisites
+
 Before running this project, ensure you have the following installed:
 
-Node.js (v14.x or later)
-PostgreSQL
-npm or yarn (comes with Node.js)
-Installation
-1. Clone the repository:
-bash
-Copy code
+- [Node.js](https://nodejs.org/en/download/) (v14.x or later)
+- [PostgreSQL](https://www.postgresql.org/download/)
+- npm or yarn (comes with Node.js)
+
+## Installation
+
+### 1. Clone the repository:
+
 git clone https://github.com/BFurkan/SecondBind-Assesment.git
 cd SecondBind-Assesment
+
 2. Install dependencies for the backend (in the project root):
-bash
-Copy code
+
 npm install
+
 3. Install dependencies for the frontend (inside the /book-inventory folder):
-bash
-Copy code
+
 cd book-inventory
 npm install
-Database Setup
-1. Create a PostgreSQL database:
-sql
-Copy code
-CREATE DATABASE book_inventory;
-2. Create the Inventory table:
-Run the following SQL query to create the Inventory table:
 
-sql
-Copy code
-CREATE TABLE Inventory (
-  id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  author VARCHAR(255) NOT NULL,
-  genre VARCHAR(255),
-  publication_date VARCHAR(255),
-  isbn VARCHAR(255) UNIQUE NOT NULL
-);
-3. Update PostgreSQL configuration:
+
+## Database Setup
+### 1. Create a PostgreSQL database:
+
+CREATE DATABASE book_inventory;
+
+### 3. Update PostgreSQL configuration:
 In the server.js file, update the PostgreSQL connection details:
 
-javascript
-Copy code
 const pool = new Pool({
   user: 'your_postgres_username',
   host: 'localhost',
@@ -56,21 +48,21 @@ const pool = new Pool({
   password: 'your_postgres_password',
   port: 5432,
 });
+
+
 Running the Application
 1. Start the backend server:
 In the project root SecondBind-Assesment folder, run the following command:
 
-bash
-Copy code
 node server.js
+
 The backend server will run on http://localhost:3001.
 
 2. Start the frontend server:
 Navigate to the /client directory and start the frontend:
 
-bash
-Copy code
 npm start
+
 The frontend app will run on http://localhost:3000.
 
 API Endpoints
@@ -106,5 +98,3 @@ react: JavaScript library for building user interfaces.
 axios: Promise-based HTTP client.
 Known Issues
 The publication date is entered as a string (VARCHAR). Ensure consistency when entering dates.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
